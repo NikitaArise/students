@@ -32,11 +32,11 @@ body{
     font-weight: 700;
     width: 50%;
     text-align: right;
-    display: inline-block;
+    display: block;
     float: left;
 }
 .group input{
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
     width: 50%;
     margin-bottom: 2px;

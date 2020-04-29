@@ -11,7 +11,7 @@
 
 <body>
     <?php require_once "header.phtml" ?>
-    <form class="reg" action="" method="GET">
+    <form class="reg" action="<?=$_SERVER['PHP_SELF'] ?>" method="POST">
         <h2>Create a new student</h2>
         <div class="group">
             <label for="name">Your name:</label>
@@ -19,7 +19,7 @@
         </div>
         <div class="group">
             <label for="surname">Your surname:</label>
-            <input type="text" name="surname" id="surname">
+            <input type="text" name="lastName" id="surname">
         </div>
         <div class="group">
             <label for="email">Email:</label>

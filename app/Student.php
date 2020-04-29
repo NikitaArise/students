@@ -2,7 +2,7 @@
 
 class Student{
     private $name;
-    private $surname;
+    private $lastName;
     private $gender;
     private $group;
     private $email;
