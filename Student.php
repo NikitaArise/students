@@ -1,4 +1,5 @@
 <?php
+
 class Student{
     private $name;
     private $surname;
@@ -7,5 +8,5 @@ class Student{
     private $email;
     private $useResult;
     private $yearBirth;
-    
 }
+echo "opaopaopa";
