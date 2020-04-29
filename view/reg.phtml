@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form class="reg" action="" method="GET">
+        <h2>Create a new student</h2>
+        <div class = "group">
+            <label for="name">Your name:</label>
+            <input type="text" required
+             name="name" id="name">
+        </div>
+        <div class = "group">
+            <label for="surname">Your surname:</label>
+            <input type="text" name="surname" id="surname">
+        </div>
+        <div class = "group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="gender">
+            <label for="">Gender:</label>
+            <ul type="none">
+                <li>
+                    <input type="radio" name="gender" value="woman">woman
+                </li>
+                <li>
+                    <input type="radio" name="gender" value="man">man
+                </li>
+            </ul>
+        </div>
+        <div class = "group">
+            <label for="">Number group:</label>
+            <input type="text" name="group">
+        </div>
+        <div class = "group">
+            <label for="">Number of points:</label>
+            <input type="text" name="useResult">
+        </div>
+        <div class = "group">
+            <label for="">Birth Year:</label>
+            <select name="birthYear" id="country">
+                <?php
+                    for($i = 1920; $i < 2020; ++$i):
+                        echo "<option value='$i'>$i</option>";
+                    endfor;
+                ?>
+            </select>
+        </div>
+        <div class="final">
+            <input type="submit" name="" value="Submit">
+        </div>
+    </form>
+
+
+</body>
+
+</html>

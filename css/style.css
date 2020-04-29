@@ -1,0 +1,78 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    width: 40%;
+    margin: 3% 30%;
+    background: #fff;
+    font-family: Arial, san-serif;
+}
+.reg{
+    padding: 15px;
+    background: #d9d9d9;
+    box-shadow: 1px 1px 7px black;
+}
+.reg h2{
+    text-align: center;
+}
+.group{
+    margin-bottom: 10px;
+}
+.group::after{
+    content: "";
+    display: block;
+    clear: both;
+    width: 100%;
+}
+.reg div label{
+    margin-top: 4px;
+    font-weight: 700;
+    width: 50%;
+    text-align: right;
+    display: inline-block;
+    float: left;
+}
+.group input{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 50%;
+    margin-bottom: 2px;
+    float: left;
+}
+.gender::after{
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+.gender{
+    box-sizing: border-box;
+}
+.gender label{
+    display: block;
+    float: left;
+    width: 50%;
+}
+.gender ul{
+    margin-top: 7px;
+    padding-left: 0px;
+    width: 50%;
+    display: block  ;
+    float: left;
+}
+.gender ul li{
+    margin-bottom: 10px; 
+    padding-bottom: 5px;
+}
+form div input[type="checkbox"]{
+    margin-top: 7px;
+    margin-left: 5px;
+    width: auto;
+
+}
+.final{
+    width: 100%;
+    padding: 0 0 0 50%;
+}
