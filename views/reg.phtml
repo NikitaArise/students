@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 
 <body>
-
+    <?php require_once "header.phtml" ?>
     <form class="reg" action="" method="GET">
         <h2>Create a new student</h2>
-        <div class = "group">
+        <div class="group">
             <label for="name">Your name:</label>
-            <input type="text" required
-             name="name" id="name">
+            <input type="text" required name="name" id="name">
         </div>
-        <div class = "group">
+        <div class="group">
             <label for="surname">Your surname:</label>
             <input type="text" name="surname" id="surname">
         </div>
-        <div class = "group">
+        <div class="group">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email">
         </div>
@@ -36,21 +36,21 @@
                 </li>
             </ul>
         </div>
-        <div class = "group">
+        <div class="group">
             <label for="">Number group:</label>
             <input type="text" name="group">
         </div>
-        <div class = "group">
+        <div class="group">
             <label for="">Number of points:</label>
             <input type="text" name="useResult">
         </div>
-        <div class = "group">
+        <div class="group">
             <label for="">Birth Year:</label>
             <select name="birthYear" id="country">
                 <?php
-                    for($i = 1920; $i < 2020; ++$i):
-                        echo "<option value='$i'>$i</option>";
-                    endfor;
+                for ($i = 1920; $i < 2020; ++$i) :
+                    echo "<option value='$i'>$i</option>";
+                endfor;
                 ?>
             </select>
         </div>

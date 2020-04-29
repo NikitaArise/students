@@ -1,0 +1,36 @@
+header{
+    width: 80%;
+    height: 100px;
+    margin: 0 10%;
+    background: #222222;
+}
+header nav{
+    width: 100%;
+}
+header nav ul{
+    padding: 0;
+    display: block;
+}
+header nav ul::after{
+    content: "";
+    width: 100%;
+    clear: both;
+    display: block;
+}
+header ul li{
+    display: block;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+header ul li a:hover{
+    color: #eb1e1e;
+}
+header ul li a{
+    text-decoration: none;
+    color: #c2c2c2;
+    font-size: 2rem;
+    display: block;
+    padding: 6% 0;
+    
+}

@@ -9,4 +9,3 @@ class Student{
     private $useResult;
     private $yearBirth;
 }
-echo "opaopaopa";

@@ -4,12 +4,13 @@ html, body{
 }
 body{
     box-sizing: border-box;
-    width: 40%;
-    margin: 3% 30%;
+    font-size: 16px;
     background: #fff;
     font-family: Arial, san-serif;
 }
 .reg{
+    margin: 3% 30%;
+    width: 40%;
     padding: 15px;
     background: #d9d9d9;
     box-shadow: 1px 1px 7px black;
