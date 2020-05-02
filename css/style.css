@@ -13,7 +13,7 @@ body{
     width: 40%;
     padding: 15px;
     background: #d9d9d9;
-    box-shadow: 1px 1px 7px black;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
 }
 .reg h2{
     text-align: center;
