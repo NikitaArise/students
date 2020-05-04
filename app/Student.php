@@ -8,7 +8,4 @@ class Student{
     public $email;
     public $useResult;
     public $birthYear;
-    public function __clone(){
-    
-    }
 }

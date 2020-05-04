@@ -23,12 +23,16 @@ class StudentGetway
     function getStudents($sort = 'useResult')
     {
         $students = new Student();
-        // $sort = $this->pdo->quote($sort);
-        $sql = "SELECT * FROM students ORDER BY :sort";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(":sort", $sort);
-        while ($res = $stmt->fetchAll(PDO::FETCH_CLASS, "Student")) {
-            $students = $res;
+        try{
+            $sql = 'SELECT * FROM students ORDER BY ' . $sort;
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            while ($res = $stmt->fetchAll(PDO::FETCH_CLASS, "Student")) {
+                $students = $res;
+            }
+        }catch(PDOException $e){
+            echo $e->getMessage();
+            exit;
         }
         return $students;
     }

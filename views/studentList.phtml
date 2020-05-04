@@ -6,19 +6,71 @@
     <table class="content-table">
         <thead>
             <tr>
-                <th class="name">Name</th>
-                <th>Last name</th>
-                <th>Gender</th>
-                <th>Group</th>
-                <th>Total points</th>
-                <th>year of birth</th>
-                <th>Email</th>
+                <th>№</th>
+                <th>Name
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=name"?>">
+                        <div class="arrow bottom"></div>
+                    </a>
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=name+desc"?>">
+                        <div class="arrow top"></div>
+                    </a>
+                </th>
+                <th>Last name
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=lastname"?>">
+                        <div class="arrow bottom"></div>
+                    </a>
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=lastname+desc"?>">
+                        <div class="arrow top"></div>
+                    </a>
+                </th>
+                <th>Gender
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=gender"?>">
+                        <div class="arrow bottom"></div>
+                    </a>
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=gender+desc"?>">
+                        <div class="arrow top"></div>
+                    </a>
+                </th>
+                <th>Group
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=group_"?>">
+                        <div class="arrow bottom"></div>
+                    </a>
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=group_+desc"?>">
+                        <div class="arrow top"></div>
+                    </a>
+                </th>
+                <th>Total points
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=useResult"?>">
+                        <div class="arrow bottom"></div>
+                    </a>
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=useResult+desc"?>">
+                        <div class="arrow top"></div>
+                    </a>
+                </th>
+                <th>Year of birth
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=birthYear"?>">
+                        <div class="arrow bottom"></div>
+                    </a>
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=birthYear+desc"?>">
+                        <div class="arrow top"></div>
+                    </a>
+                </th>
+                <th>Email
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=email"?>">
+                        <div class="arrow bottom"></div>
+                    </a>
+                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=email+desc"?>">
+                        <div class="arrow top"></div>
+                    </a>
+                </th>
             </tr>
         </thead>
         <tbody>
             <!-- here need data -->
+            <?php $i = 1; ?>
             <?php foreach ($students as $student) : ?>
                 <tr>
+                    <td><?= $i++ ?></td>
                     <td><?= $student->name ?></td>
                     <td><?= $student->lastname ?></td>
                     <td><?= $student->gender ?></td>
