@@ -11,9 +11,7 @@ require_once "../bootstrap.php";
 
 
 
-$pdo = new PDO("sqlite:../" . NAME_DB);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$studentsService = new StudentGetway($pdo);
+
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

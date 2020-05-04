@@ -20,12 +20,21 @@ class StudentGetway
     /***
      * SELECT ALL STUDENTS
      */
-    function getStudents(Student $students)
+    function getStudents($sort = 'useResult')
     {
+        $students = new Student();
+        // $sort = $this->pdo->quote($sort);
+        $sql = "SELECT * FROM students ORDER BY :sort";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(":sort", $sort);
+        while ($res = $stmt->fetchAll(PDO::FETCH_CLASS, "Student")) {
+            $students = $res;
+        }
+        return $students;
     }
     function insertStudent($name, $lastName, $email, $gender, $group, $useResult, $birthYear)
     {
-        $sql = ' INSERT INTO students(name, lastName, email, gender, group_, useResult, birthYear) 
+        $sql = 'INSERT INTO students(name, lastName, email, gender, group_, useResult, birthYear) 
             VALUES(
             :name, 
             :lastName, 

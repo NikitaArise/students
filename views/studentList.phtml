@@ -17,7 +17,17 @@
         </thead>
         <tbody>
             <!-- here need data -->
-
+            <?php foreach ($students as $student) : ?>
+                <tr>
+                    <td><?= $student->name ?></td>
+                    <td><?= $student->lastname ?></td>
+                    <td><?= $student->gender ?></td>
+                    <td><?= $student->group_ ?></td>
+                    <td><?= $student->useResult ?></td>
+                    <td><?= $student->birthYear ?></td>
+                    <td><?= $student->email ?></td>
+                </tr>
+            <?php endforeach; ?>
 
 
 

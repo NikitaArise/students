@@ -1,11 +1,14 @@
 <?php
 
 class Student{
-    private $name;
-    private $lastName;
-    private $gender;
-    private $group;
-    private $email;
-    private $useResult;
-    private $yearBirth;
+    public $name;
+    public $lastname;
+    public $gender;
+    public $group_;
+    public $email;
+    public $useResult;
+    public $birthYear;
+    public function __clone(){
+    
+    }
 }
