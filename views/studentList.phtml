@@ -8,20 +8,13 @@
             <tr>
                 <th>№</th>
                 <th>Name
-                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=name"?>">
-                        <div class="arrow bottom"></div>
-                    </a>
-                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=name+desc"?>">
-                        <div class="arrow top"></div>
-                    </a>
+                    <div  class="arrow bottom" sort="name"></div>
+
+                    <div class="arrow top" sort="name desc"></div>
                 </th>
                 <th>Last name
-                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=lastname"?>">
-                        <div class="arrow bottom"></div>
-                    </a>
-                    <a href="<?=$_SERVER['PHP_SELF'] . "?sort=lastname+desc"?>">
-                        <div class="arrow top"></div>
-                    </a>
+                    <div class="arrow bottom" sort="lastname"></div>
+                    <div class="arrow top" sort="lastname desc"></div>
                 </th>
                 <th>Gender
                     <a href="<?=$_SERVER['PHP_SELF'] . "?sort=gender"?>">
@@ -87,7 +80,8 @@
 
         </tbody>
     </table>
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../js/table.js"></script>
 </body>
-
 </html>

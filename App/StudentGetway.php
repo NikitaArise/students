@@ -1,12 +1,16 @@
 <?php
 
+namespace App;
+
+// use App\Student;
+
 class StudentGetway
 {
 
     private $pdo;
 
 
-    function __construct(PDO $pdo)
+    function __construct(\PDO $pdo)
     {
         $this->pdo = $pdo;
     }
@@ -20,6 +24,9 @@ class StudentGetway
     /***
      * SELECT ALL STUDENTS
      */
+    function checkStudent($email){
+        
+    }
     function getStudents($sort = 'useResult')
     {
         $students = new Student();
@@ -27,10 +34,10 @@ class StudentGetway
             $sql = 'SELECT * FROM students ORDER BY ' . $sort;
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
-            while ($res = $stmt->fetchAll(PDO::FETCH_CLASS, "Student")) {
+            while ($res = $stmt->fetchAll(\PDO::FETCH_CLASS | \PDO::FETCH_CLASSTYPE)) {
                 $students = $res;
             }
-        }catch(PDOException $e){
+        }catch(\PDOException $e){
             echo $e->getMessage();
             exit;
         }
@@ -58,7 +65,7 @@ class StudentGetway
         $stmt->bindParam(":birthYear", $birthYear);
         try {
             $res = $stmt->execute();
-        } catch (PDOException $e) {
+        } catch (\PDOException $e) {
             echo $e->getMessage();
             exit;
         }

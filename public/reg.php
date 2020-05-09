@@ -7,9 +7,12 @@
  * here need validate data POST array throw Validator
  * 
  */
+
+
 require_once "../bootstrap.php";
+use App\Validator;
 
-
+// echo __DIR__;
 
 
 
@@ -32,10 +35,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     /***
      * CHECK HTTP!!!** 
      * INSERT DATA INTO DATABASE
-     * LOCATION TO PAGE WITHOUT FORM (studentList)
+     * LOCATION TO PAGE with student list (studentList.php)
      */
     if ($_COOKIE['token'] == $token) {
         $result = $studentsService->insertStudent($name, $lastName, $email, $gender, $group, $useResult, $birthYear);
+        $infoStudent= [
+            "name" => $name,
+            "lastName" => $lastName,
+            "email" => $email,
+            "gender" => $gender,
+            "group" => $group,
+            "useResult" => $useResult,
+            "birthYear" => $birthYear,
+        ];
+        /* save data about student in cookies */
+        $infoStudent = base64_encode(serialize($infoStudent));
+        setcookie('infoStudent', $infoStudent, time() + 60 * 60 * 24 * 365 * 10);
         if ($result == true){
             header("Location: studentList.php");
         }
@@ -44,12 +59,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Error token";
         exit;
     }
-} else {
+} else if ($_SERVER['REQUEST_METHOD'] == 'GET' and isset($_COOKIE['infoStudent'])){
+    /**
+     * CHANGE FORM
+     */
+    $infoStudent = unserialize(base64_decode($_COOKIE['infoStudent']));
+    
+    echo "<pre>";
+    var_dump($infoStudent);
+
+}
+
+else {
     /**
      * REQUIQRE REG FORM 
      */
     $token = uniqid();
-    setcookie('token', $token, time() + 60 * 60 * 24 * 365 * 10);
+    setcookie('token', $token, time() + 60 * 60 * 24 );
     require_once "../views/reg.phtml";
 }
 

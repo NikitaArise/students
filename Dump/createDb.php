@@ -1,13 +1,16 @@
 <?php
+
+use Dump\Config;
+
 require_once "config.php";
 
 
 
-if (is_file("../" . NAME_DB)){
-    unlink("../" . NAME_DB);
+if (is_file("../" . Config::$NAME_DB)){
+    unlink("../" . Config::$NAME_DB);
 }
 
-$pdo = new PDO("sqlite:../" . NAME_DB);
+$pdo = new PDO("sqlite:../" . Config::$NAME_DB);
 
 $sql = "CREATE TABLE students (
         id INTEGER PRIMARY KEY,

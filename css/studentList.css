@@ -1,8 +1,8 @@
 .content-table {
     border-collapse: collapse;
     /* display: block; */
-    width: 80%;
-    margin: 2% 10% 0;
+    width: 90%;
+    margin: 2% 5% 0;
     /* border-radius: 5px 5px 0 0; */
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -50,7 +50,8 @@
     display: inline-block;
     width: 0;
     height: 0;
-    border: 7px solid transparent;
+    border: 8px solid transparent;
+    cursor: pointer;
 }
 
 .top {
